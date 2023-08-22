@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1 style="text-align: center;">[2,5,4,3,1,6]</h1>
+    <div style="text-align:center;">
+        <label>Enter a number</label><br>
+        <input type = "number" id="key"><br>
+        <input type ="button" onclick="linear()" value="search">
+        <p id="disp"></p>
+    </div>
+    <script>
+        let num;
+        let result;
+        
+        function linear(){
+            let flag=0;
+            num = document.getElementById("key").value;
+            let arr=[2,5,4,3,1,6];
+            disp = document.getElementById("disp");
+            disp.innerHTML = "<br>";
+            for (let i=0;i<6;i++){
+                if(arr[i]==num){
+                    flag=1;
+                    disp.innerHTML = "Number found at position" + (i+1);  
+                    break;
+                    
+                }
+            }
+            if(flag==0)
+                document.write("Number not found");
+        };
+    </script>
+
+</body>
+</html>

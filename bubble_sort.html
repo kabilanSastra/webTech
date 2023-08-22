@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+<body>
+    <h1 style="text-align: center;">[2,5,4,3,1,6]</h1>
+    <div style="text-align:center;">
+        
+        <input type ="button" onclick="bubble()" value="Sort">
+        <h1><p id="disp"></p></h1>
+    </div>
+    <script>
+        function bubble(){
+            let a=[2,5,4,3,1,6];
+            disp = document.getElementById("disp");
+            disp.innerHTML = "<br>";
+            for(let i=0;i<6;i++){
+                for(let j=0; j<5;j++){
+                    if(a[j] > a[j+1]){
+                        let temp = a[j];
+                        a[j] = a[j+1];
+                        a[j+1] = temp;
+                    }
+                }
+            }
+        disp.innerHTML = a;
+        }
+
+    </script>
+</body>
+</html>

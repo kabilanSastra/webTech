@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="C:\Web Tech 042\style_reg_form.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Register Here</h3>
+        <div class="form">
+            <form id="form" action="registered.html" method="GET">
+                <label>Username : </label><br>
+                <input type="text" placeholder="Your Name Here" name="uname"><br>
+                <br>
+                <label>New Password : </label><br>
+                <input type="password" placeholder="Enter a Strong password"><br>
+                <br>
+                <label>Re-type Password : </label><br>
+                <input type="password" placeholder="Repeat the password"><br>
+                <br>
+                <label>Age : </label><br>
+                <input type="number" placeholder="your age by the date of reg."><br>
+                <br>
+                <label>Hobbies : </label><br>
+                <textarea name="hobby" placeholder="Enter your Hobbies"></textarea><br>
+                <br>
+                <input id="btn" type="submit" onclick="submitValue()">
+                <input id="btn" type="reset" >
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function submitForm(){
+        if(typeof(localStorage) != "undefined"){
+            localStorage.name = document.getElementById("uname").value;
+        }
+        document.getElementById("form").submit();
+    }
+      </script>
+</body>
+</html>
